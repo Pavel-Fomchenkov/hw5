@@ -24,15 +24,14 @@ public class Main {
             else if (clientOS == 1 && truePhoneProductionYear < clientDeviceYear)
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             else System.out.println("Установите версию приложения для Android по ссылке");
-        }
+    }
 
-   public static void task3() {
+    public static void task3() {
         short year = 2100;
-        if (year % 4 != 0) System.out.println(year + " год не является високосным");
-            else if (year % 400 == 0 && year % 100 == 0) System.out.println(year + " год является високосным");
-            else if (year % 100 == 0) System.out.println(year + " год не является високосным");
-            else System.out.println(year + " год является високосным");
-        }
+        if ((year % 2 == 0 && year % 100 != 0) || year % 400 == 0) {
+            System.out.println(year + " год является високосным");
+        } else System.out.println(year + " год не является високосным");
+    }
 
     public static void task4() {
         int deliveryDistance = 95;
